@@ -67,7 +67,7 @@ function reset() {
     document.getElementById("user_score").textContent = 0;
     document.getElementById("computer_score").textContent = 0;
 
-    window.location.href = "mainPage.html"
+    window.location.href = "index.html"
 }
 
 function win() {
@@ -75,7 +75,7 @@ function win() {
     window.location.href = "win.html"
 }
 function redirect(){
-    window.location.href = "mainPage.html"
+    window.location.href = "index.html"
 }
 function random_generator() {
     return Math.floor(Math.random() * 3) + 1;
