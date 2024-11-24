@@ -11,32 +11,29 @@
 }
 
 .circle {
-    display: none;
+    display: none; 
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background: #ff6f61;
+    background: #ff6f61; 
     margin: 10px;
     transition: 1s ease;
     position: absolute;
-    top: 37px;
+    top: 40px;
     right: 240px;
-    
 }
-
 
 .delay1 {
-    
-    animation: waves 2.5s linear;
+    animation: waves 3s linear;
 }
 .delay2 {
-    animation: waves 2.5s linear 0.7s forwards;
+    animation: waves 3s linear 0.7s forwards;
 }
 .delay3 {
-    animation: waves 2.5s linear 1.3s forwards;
+    animation: waves 3s linear 1.3s forwards;
 }
 .delay4 {
-    animation: waves 2.5s linear 1.9s forwards;
+    animation: waves 3s linear 1.9s forwards;
 }
 
 @keyframes waves {
@@ -45,7 +42,7 @@
         opacity: 1;
     }
     100% {
-        transform: scale(4);
+        transform: scale(6); 
         opacity: 0;
     }
 }
@@ -55,19 +52,19 @@
         transform: scale3d(1, 1, 1);
     }
     30% {
-        transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.5, 0.5, 1); 
     }
     40% {
-        transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.5, 1.5, 1);
     }
     50% {
-        transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.25, 0.75, 1);
     }
     65% {
-        transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.9, 1.1, 1);
     }
     75% {
-        transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.1, 0.9, 1);
     }
     100% {
         transform: scale3d(1, 1, 1);
