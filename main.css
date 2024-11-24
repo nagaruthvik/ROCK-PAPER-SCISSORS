@@ -30,6 +30,13 @@ body {
     left: 40%;
     background-color: #ffff;
     border: 15px solid #0074B6;
+    width: 15vw; 
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
 }
 
 #scissors {
@@ -37,6 +44,13 @@ body {
     left: 58%;
     background-color: #ffff;
     border: 15px solid #FFA943;
+    width: 15vw; 
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
 }
 
 #paper {
@@ -101,6 +115,10 @@ img {
     #line1, #line2, #line3 {
         border-width: 8px;
     }
+    #paper {
+        bottom: 32%;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {

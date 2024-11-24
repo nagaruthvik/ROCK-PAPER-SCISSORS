@@ -1,112 +1,110 @@
-/* Ensure all styles are desktop-focused */
-@media screen and (min-width: 1024px) {
-    .paper_vis, .scissors_vis, .rock_vis {
-        display: none;
-    }
+.paper_vis, .scissors_vis, .rock_vis {
+    display: none;
+}
 
-    .btn {
-        z-index: 2;
-        width: 15vw; /* Use vw for responsive sizing */
-        height: 15vw;
-        max-width: 150px; /* Optional: Set max sizes for very large screens */
-        max-height: 150px;
-        border-radius: 50%;
-    }
 
-    #rock {
-        position: absolute;
-        background-color: #ffff;
-        top: 60%;
-        left: 25%; /* Adjust for responsiveness */
-        transform: translate(-50%, -50%);
-        border: 1vw solid #0074B6; /* Border scales with size */
-    }
+.btn {
+    z-index: 2;
+    width: 15vw; 
+    height: 15vw;
+    max-width: 150px; 
+    max-height: 150px;
+    border-radius: 50%;
+}
 
-    #scissors {
-        position: absolute;
-        top: 60%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        background-color: #ffff;
-        border: 1vw solid #FFA943;
-    }
+#rock {
+    position: absolute;
+    background-color: #ffff;
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border: 1vw solid #0074B6; 
+}
 
-    #paper {
-        position: absolute;
-        top: 60%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        background-color: #ffff;
-        border: 1vw solid #BD00FF;
-    }
+#scissors {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #ffff;
+    border: 1vw solid #FFA943;
+}
 
-    img {
-        width: 7vw; /* Adjusted for responsiveness */
-        max-width: 80px; /* Optional max width for consistency */
-    }
+#paper {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: #ffff;
+    border: 1vw solid #BD00FF;
+}
 
-    #h_your {
-        color: white;
-        position: absolute;
-        left: 28%;
-        top: 40%;
-        font-size: 1.2vw; /* Adjust font size dynamically */
-    }
+img {
+    width: 7vw;
+    max-width: 80px; 
+}
 
-    #h_comp {
-        color: white;
-        position: absolute;
-        left: 60%;
-        top: 40%;
-        font-size: 1.2vw;
-    }
+#h_your {
+    color: white;
+    position: absolute;
+    left: 28%;
+    top: 40%;
+    font-size: 1.2vw; 
+}
 
-    #result_text {
-        color: white;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2vw;
-    }
+#h_comp {
+    color: white;
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    font-size: 1.2vw;
+}
 
-    #against {
-        color: white;
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.2vw;
-    }
+#result_text {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
 
-    #btn_result {
-        background-color: white;
-        position: absolute;
-        height: 5vh;
-        width: 12vw;
-        top: 75%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 5px;
-        border: none;
-        letter-spacing: 2px;
-        color: rgba(0, 0, 0, 0.63);
-        font-size: 1vw;
-    }
+#against {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2vw;
+}
 
-    #btn_next {
-        position: absolute;
-        display: none;
-        top: 90%;
-        right: 10%;
-        width: 12vw;
-        height: 7vh;
-        border: 0.3vw solid white;
-        background-color: #8CC461;
-        color: white;
-        font-size: 1.2vw;
-        font-weight: bold;
-        letter-spacing: 2px;
-        border-radius: 10px;
-    }
+#btn_result {
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    width: 12vw;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.63);
+    font-size: 1vw;
+}
+
+#btn_next {
+    position: absolute;
+    display: none;
+    top: 90%;
+    right: 10%;
+    width: 12vw;
+    height: 7vh;
+    border: 0.3vw solid white;
+    background-color: #8CC461;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 10px;
 }
