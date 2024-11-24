@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="scoreBoard.css">
+    <link rel="stylesheet" href="animation.css">
+    
+</head>
+<body>
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementById("result_text").textContent = localStorage.getItem('result') || '';
+            document.getElementById("against").textContent = localStorage.getItem('against') || '';
+            const value_id = { 'rock': 1, 'scissors': 2, 'paper': 3 };
+
+            
+            function getKeyByValue(obj, value) {
+                return Object.keys(obj).find(key => obj[key] == value);
+            }
+
+           
+            let user_choice = localStorage.getItem('your_choice') || ''; 
+            let comp_choice = localStorage.getItem('comp_choice') || '';
+
+           
+            user_choice = getKeyByValue(value_id, user_choice);
+            comp_choice = getKeyByValue(value_id, comp_choice);
+
+            console.log("User Choice:", user_choice);
+            console.log("Computer Choice:", comp_choice);
+
+            if (!user_choice || !comp_choice) {
+                console.error("Invalid choice found in localStorage");
+            }
+            else if (user_choice == comp_choice) {
+                
+                var clone_element = document.getElementById(user_choice).cloneNode(true);
+                
+               
+                document.getElementById(user_choice).style.left = '31%';
+                document.getElementById(user_choice).style.display = 'inline';
+                
+            
+                clone_element.style.left = '65%';
+                clone_element.style.display = 'inline';
+                document.body.appendChild(clone_element);  
+            }
+            else {
+                
+                document.getElementById(user_choice).style.left = '31%';
+                document.getElementById(user_choice).style.display = 'inline';
+                
+                document.getElementById(comp_choice).style.left = '65%';
+                document.getElementById(comp_choice).style.display = 'inline';
+
+            }
+            if (localStorage.getItem('result') === 'YOU WIN') {
+                Array.from(document.getElementsByClassName('circle')).forEach(circle => {
+                    circle.style.display = 'block';
+                    circle.style.right = '41vh';
+                });
+                
+            }
+            else if (localStorage.getItem('result') === 'YOU LOST') {
+
+                Array.from(document.getElementsByClassName('circle')).forEach(circle => {
+                    circle.style.display = 'block';
+                    circle.style.left = '33vh';
+                });
+            }
+
+            else{
+                document.getElementsByClassName('circle')[0].style.display = 'none'
+            }
+          
+            
+
+            if (localStorage.getItem('result') === 'YOU WIN' && localStorage.getItem('final') === 'final') {
+                
+                document.getElementById("btn_next").style.display = "inline";
+                
+                document.getElementById("btn_result").onclick = reset;
+            } else if (localStorage.getItem('result') === 'YOU LOST' && localStorage.getItem('final') === 'final') {
+                document.getElementById("btn_result").onclick = reset;
+                
+            } else {
+                document.getElementById("btn_result").onclick = redirect;
+                
+            }
+
+
+        });
+        function win() {
+            localStorage.clear()
+            window.location.href = "win.html"
+        }
+        function redirect(){
+            window.location.href = "mainPage.html"
+        }
+    </script>
+    <div id="main">
+        <div id="scoreboard">
+            <div id="tittle">
+                <h1>ROCK</h1>
+                <H1>PAPER</H1>
+                <H1>SCISSORS</H1>
+            </div>
+            <div id="scoredisplay">
+                <div id="compscore"><H4>COMPUTER SCORE</h4><h1  id="computer_score">0</h1></div>
+                
+                <div id="yourscore"><H4>YOUR SCORE</H4><h1 id="user_score">0</h1></div>
+            </div>
+        </div>
+        <h4 id="h_your" >Your Choice</h4>
+        <h1 id="result_text"></h1>
+        <h2 id="against"></h2>
+
+        <input type="button" value="PLAY AGAIN" id="btn_result" onclick="redirect()">
+        <input type="button" value="NEXT" id="btn_next" onclick="win()">
+        
+        
+        
+        <div id="game">
+            <div class="container">
+            <div class="circle delay1"></div>
+            <div class="circle delay2"></div>
+            <div class="circle delay3"></div>
+            <div class="circle delay4"></div>
+        </div>
+            <button  class="btn rock_vis not_valid" id="rock"><img src="./icon/rock.png" alt="ROCK"></button>
+            <button  class="btn scissors_vis not_valid" id="scissors"><img src="./icon/image.png" style="height: 15vh;" alt="SCISSORS"></button>
+            <button  class="btn paper_vis not_valid" id="paper"><img src="./icon/hand.png" alt="PAPER"></button>
+        </div>
+        <h4 id="h_comp">Computer Choice</h4>
+        <div>
+            
+
+            <input type="button" value="RULES" id="toggleButton">
+            
+            <div id="rulesBox" class="hidden">
+            <input type="button" id="closeButton" class="close-btn" value="X">
+            
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./mainPage.js"></script>
+    <script src="./game.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="scoreBoard.css">
+    
+    
+</head>
+<body>
+    <div id="main">
+        <div id="scoreboard">
+            <div id="tittle">
+                <h1>ROCK</h1>
+                <H1>PAPER</H1>
+                <H1>SCISSORS</H1>
+            </div>
+            <div id="scoredisplay">
+                <div id="compscore"><H4>COMPUTER SCORE</h4><h1  id="computer_score">0</h1></div>
+                
+                <div id="yourscore"><H4>YOUR SCORE</H4><h1 id="user_score">0</h1></div>
+            </div>
+        </div>
+        <div id="game">
+            <button class="btn" id="rock" name="1"><img src="./icon/rock.png" alt=""></button>
+            <div id="line1"></div>
+            <button class="btn" id="scissors" name="2"><img src="./icon/image.png " style="height: 15vh;"  alt=""></button>
+            <div id="line2"></div>
+            <button class="btn" id="paper" name="3"><img src="./icon/hand.png" alt=""></button>
+            <div id="line3"></div>
+        </div>
+        <div>
+
+            <input type="button" value="RULES" id="toggleButton">
+            
+            <div id="rulesBox" class="hidden">
+            <input type="button" id="closeButton" class="close-btn" value="X">
+
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+    <script src="./mainPage.js"></script>
+    
+</body>
+</html>

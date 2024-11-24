@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./mainPage.js"></script>
+    <style>
+        body{
+            background-color:  rgb(144,196,100);;
+        }
+        
+        #cup{
+
+            
+            position: absolute;
+            top: 20%;
+            left: 42%;
+            width: 40vh;
+            height: 40vh;
+        }
+        button{
+            width: 20vh;
+            height: 5vh;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            position: absolute;
+            top: 87%;
+            left: 48%;
+        }
+        
+#toggleButton{
+    position: absolute;
+    top: 90%;
+    right: 1%;
+    width: 18vh;
+    height: 7vh;
+    border: 3px solid white;
+    background-color: #8CC461;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+  
+
+  
+  #rulesBox {
+    margin-top: 20px;
+    padding: 15px;
+    border: 5px solid white;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 50vh;
+    position: absolute;
+    right: 2%;
+    top: 30vh;
+    text-align: left;
+    color: white;
+    background-color: #004429;
+
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+ul {
+    margin: 10px 0 0;
+    padding: 0 15px;
+  }
+  
+  li {
+    margin: 10px 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  li::before {
+    content: "▪";
+    color: yellow;
+    margin-right: 10px;
+  }
+#rulesBox >h3{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+.close-btn {
+    background-color: #ff4c4c; 
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 0px;
+  }
+  
+        
+        
+    </style>
+</head>
+<body>
+    <div id="image">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 28%; left: 33%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 40%; left: 32%; height: 15%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 63%; left: 37%; height: 4%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 17%; left: 41%; height: 3%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 28%; left: 63%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 40%; left: 62%; height: 15%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 63%; left: 63%; height: 4%;">
+        <img src="./icon/star.png" alt="" style="position: absolute; top: 17%; left: 61%; height: 3%;">
+        <img src="./icon/cup.png" alt="" id="cup">
+        <h1 style="color: white; font-size: 4em; position: absolute; top: 62%; left: 39%; letter-spacing: 10px; ">HURRAY!!</h1>
+        <h1 style="color: white; font-size: 2em; position: absolute; top: 76%; left: 36%; letter-spacing: 8px; ">YOU WON THE GAME</h1>
+        <button onclick="reset()">PLAY AGAIN</button>
+
+    </div>
+    <div>
+
+        <input type="button" value="RULES" id="toggleButton">
+        
+        <div id="rulesBox" class="hidden">
+        <input type="button" id="closeButton" class="close-btn" value="X">
+        
+        <h3>Game Rules</h3>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+</body>
+</html>

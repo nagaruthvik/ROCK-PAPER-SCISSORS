@@ -1,0 +1,79 @@
+
+#game{
+    height: 50%;
+    width: 30%;
+}
+.btn{
+    z-index: 2;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    
+}
+
+#rock{
+    position: relative;
+    top: 5vh;
+    left: 15vh;
+    
+    background-color: #ffff;
+    border: 15px solid #0074B6;
+}
+
+#scissors{
+    position: relative;
+    top: 9vh;
+    left: 30vh;
+    background-color: #ffff;
+    border: 15px solid #FFA943;
+}
+#paper{
+    position: relative;
+    top: 35vh;
+    right: 9vh;
+    background-color: #ffff;
+    border: 15px solid #BD00FF ;
+}
+img{
+    width: 10vh;
+}
+#line1{
+
+z-index: 1;
+position: absolute;
+width: 133px;
+height: 0px;
+left: 770px;
+top: 393px;
+
+border: 15px solid rgba(0, 0, 0, 0.64);
+
+}
+#line2{
+
+
+
+position: absolute;
+width: 100px;
+height: 0px;
+left: 700px;
+top: 500px;
+
+border: 15px solid rgba(0, 0, 0, 0.64);
+transform: rotate(60.58deg);
+
+
+}
+#line3{
+   
+
+position: absolute;
+width: 100px;
+height: 0px;
+left: 850px;
+top: 500px;
+
+border: 15px solid rgba(0, 0, 0, 0.64);
+transform: rotate(120deg);
+
+}
